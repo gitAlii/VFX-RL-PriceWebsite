@@ -1,6 +1,6 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+$cent: center;
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -13,9 +13,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.body {
-    background-color:  #b3b3ff;
-}
+
 
 .container {
     padding: 24px;
@@ -56,9 +54,14 @@ Nav
 
 */
 
+#landing{
+    background-color: aqua;
+}
+
 nav {
 display: flex;
 justify-content: space-between; 
+
 }
 
 .nav__logo{
@@ -68,8 +71,8 @@ justify-content: space-between;
 
 .nav__list{
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    align-items: $cent;
+    justify-content: $cent;    
 }
 
 .nav__link {
@@ -93,6 +96,11 @@ justify-content: space-between;
     opacity: 0.6;
 }
 
+// 
+// HOME
+// 
+
+
 .home__wrapper {
     display: flex;
     padding: 60px 0;
@@ -100,6 +108,7 @@ justify-content: space-between;
 }
 
 .home__text {
+    margin: 64px 0 24px 0;
     width: 100%;
 }
 
@@ -118,13 +127,14 @@ justify-content: space-between;
 
 .home__img--wrapper{
     width: 100%;
-    align-items: center;
+    align-items: $cent;
     padding-left: 40px;
     height: 100%;
 }
 
 .home__img{
-    margin: 60px 0 0 60px ;
+    margin: 60px 0 0 0px ;
+    object-fit: fill;
 }
 
 /* 
@@ -133,8 +143,8 @@ Pricing
 
 */
 
-#section {
-    padding: 200px 0;
+#pricing {
+    padding: 24px 0;
 }
 
 .pricing__title {
@@ -142,13 +152,46 @@ Pricing
     padding-bottom: 16px;
 }
 
+
+
 .pricing__text {
-    text-align: center;
-    padding-bottom: 24px;
+    text-align: $cent;
+    padding-bottom: 36px;
 }
 
 .pricing__link {
     color: black;
     font-size: bolder;
     font-weight: 700;   
+}
+
+.price__montage{
+    display: flex;
+    align-items: $cent;
+    justify-content: $cent;
+    flex-direction: column;
+}
+
+.table__styl, th, td {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid black;
+}
+
+.cross{
+    text-decoration-line: line-through;
+}
+
+// 
+// CONTACTS
+// 
+
+#contact{
+    display: flex;
+    justify-content: $cent;
+    align-items: $cent;
+}
+
+.contact__link{
+    padding: 24px;
 }
