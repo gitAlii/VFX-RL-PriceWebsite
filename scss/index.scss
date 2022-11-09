@@ -195,3 +195,19 @@ Pricing
 .contact__link{
     padding: 24px;
 }
+
+@media (max-width: 700px) {
+    .home__title{
+        font-size: 36px;
+    }
+    .home__para{
+        font-size: 12px;
+    }
+    .home__img{
+        width: 100%;
+    }
+    .home__partner{
+        width: 100%;
+        max-width: 300px;
+    }
+}
