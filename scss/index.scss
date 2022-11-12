@@ -55,7 +55,7 @@ Nav
 */
 
 #landing{
-    background-color: aqua;
+    background-color: #242422;
 }
 
 nav {
@@ -67,6 +67,7 @@ justify-content: space-between;
 .nav__logo{
     filter: invert(1);
     z-index: 1;
+    border-radius: 9999px;
 }
 
 .nav__list{
@@ -87,7 +88,7 @@ justify-content: space-between;
     padding: 16px;
     font-size: 16px;
     color: white;
-    background-color: black;
+   
     font-weight: 700;
     transition: 300ms ease all;
 }
@@ -105,7 +106,20 @@ justify-content: space-between;
     display: flex;
     padding: 60px 0;
     margin: 0 auto;
+    animation: 400ms fade-up ease
 }
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .home__text {
     margin: 64px 0 24px 0;
@@ -145,14 +159,25 @@ Pricing
 
 #pricing {
     padding: 24px 0;
+    animation: 400ms fade-left ease
 }
+
+@keyframes fade-left{
+    0% {
+        opacity: 0;
+        transform: translatex(-80px);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
 
 .pricing__title {
     font-size: 24px;
     padding-bottom: 16px;
 }
-
-
 
 .pricing__text {
     text-align: $cent;
@@ -172,11 +197,51 @@ Pricing
     flex-direction: column;
 }
 
-.table__styl, th, td {
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid black;
+.price__heading {
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: bolder;
 }
+
+.price__table{
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba($color: black, $alpha: 0.15);
+    thead{
+        background-color: #009879;
+        color: white;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    th{
+        padding: 16px 16;
+        margin: 10px 0; 
+        font-size: 0.9em;
+        min-width: 100px;
+    }
+    td{
+        margin: 10px 0;
+        padding: 8px;
+        font-size: 0.9em;
+        min-width: 100px;
+    }
+
+    tbody {
+        tr{
+        border-bottom: 1px solid #ddd;
+        }
+        tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+    }
+    
+    
+
+}
+
+
 
 .cross{
     text-decoration-line: line-through;
@@ -203,11 +268,17 @@ Pricing
     .home__para{
         font-size: 12px;
     }
+    .home__wrapper{
+        flex-direction: column;
+    }
     .home__img{
         width: 100%;
     }
     .home__partner{
         width: 100%;
         max-width: 300px;
+    }
+    .price__table th td{
+         max-width: 20px;
     }
 }
