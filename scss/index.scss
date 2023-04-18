@@ -250,6 +250,9 @@ Pricing
 // 
 // CONTACTS
 // 
+footer{
+    background-color: black;
+}
 
 #contact{
     display: flex;
@@ -260,6 +263,7 @@ Pricing
 .contact__wrapper{
     display: flex;
     flex-direction: column;
+    background-color: aqua;
 }
 
 .contact__link{
@@ -280,6 +284,9 @@ Pricing
 .red{
     color: red;
 }
+
+
+
 
 // 
 //
